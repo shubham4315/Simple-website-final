@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>APLLICATION FORM</title>
+    <link rel="stylesheet" href="simple.css">
+    <script>
+        function validateForm() {
+            var fn = document.myForm.fname.value;
+            var ln = document.myForm.lname.value;
+            var ag = document.myForm.age.value;
+            var ad1 = document.myForm.add1.value;
+            var ad2 = document.myForm.add2.value;
+            var zp = document.myForm.zip.value;
+            var cy = document.myForm.city.value;
+            var st = document.myForm.state.value;
+            var em = document.myForm.email.value;
+            var ph = document.myForm.phone.value;
+
+            atpos = em.indexOf("@");
+            dotpos = em.lastIndexOf(".");
+
+            if (!isNaN(fn)) {
+                alert("Please enter correct name");
+                form.fname.focus();
+                return false;
+            }
+
+            if (!isNaN(ln)) {
+                alert("Please enter correct name");
+                return false;
+            }
+
+            if (isNaN(ag) || ag > 100) {
+                alert("Please enter correct age");
+                return false;
+            }
+
+            if (isNaN(zp) || zp.length != 6) {
+                alert("enter a valid ZIP ");
+                return false;
+            }
+
+            if (atpos < 1 && em != "" || dotpos < atpos + 4 || dotpos > em.length - 1) {
+                alert("Please enter a valid gmail id");
+                return false;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <h1 style="text-align:center;text-decoration:underline; color:#0d97ff;margin-bottom: 40px;">APPLICATION FORM</h1>
+        
+        <form name="myForm" onsubmit="return validateForm()" style="display:inline-block;">
+            First Name: <input type="text" name="fname" id="fna" style="background:#0d97ff;">
+            Last Name: <input type="text" name="lname" style="background:#0d97ff;"></br> </br>
+            Age: <input type="text" name="age" style="background:#0d97ff;"></br> </br>
+            Address line 1: <input type="text" name="add1" style="background:#0d97ff;"></br> </br>
+            Address line 2: <input type="text" name="add2" style="background:#0d97ff;"></br> </br>
+            zip: <input type="text" name="zip" style="background:#0d97ff;">
+            city: <input type="text" name="city" style="background:#0d97ff;">
+            State: <input type="text" name="state" style="background:#0d97ff;"></br> </br>
+            E-Mail: <input type="text" name="email" style="background:#0d97ff;">
+            Phone: <input type="text" name="phone" style="background:#0d97ff;"></br> </br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+
+</html>

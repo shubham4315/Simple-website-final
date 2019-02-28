@@ -1,0 +1,392 @@
+body,ul,a,h1,p{
+    margin: 0;
+    padding: 0;
+    font-family: "CalibreSemibold", helvetica, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.navigation{
+    display: flex;
+    height:40px;
+    padding:15px 30px;
+    width:96%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    background: white;
+}
+
+.logo{
+    flex: 0 0 10%;
+    margin-right: 3%;
+}
+
+.links{
+    flex: 0 0 50%;
+}
+
+.login{
+    flex: 0 0 20%;
+}
+
+.main-nav{
+    display: flex;
+    flex: 0 0 90%;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 32px;
+    width: 120px;
+    margin-top: 2px;
+}
+
+
+.links > ul{
+    display: flex;
+}
+
+.links>ul>li{
+    margin-right:10%;
+}
+
+.links>ul>li>a{
+    font-weight: bold;
+    color: #333e48;
+    font-size: 14px;
+    line-height:40px;
+}
+
+.links>ul >li:nth-child(1) >a:hover{
+    border-bottom: 2px solid blue;
+}
+
+.links>ul  >li:nth-child(2) >a:hover{
+    border-bottom: 2px solid pink;
+}
+
+.links>ul  >li:nth-child(3) >a:hover{
+    border-bottom: 2px solid yellowgreen;
+
+}
+
+.links >ul>li:nth-child(4) >a:hover{
+    border-bottom: 2px solid hotpink;
+}
+
+.login a{
+    border: 2px solid #0d97ff;
+    border-radius: 2px;
+    height:35px;
+    text-align: center;
+    margin-right: 4%;
+}
+
+.login a.log{
+    padding: 10px 25px;
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: bolder;
+    color:#0d97ff;
+}
+
+.login a.apply{
+    padding: 10px 25px;
+    color: white;
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.apply{
+    background: #0d97ff;
+    transition: background 0.45s;
+}
+
+.apply:hover{
+    background: #007cd9;
+}
+
+.sub-menu{
+    max-height: 0px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.sub-menu ul li a{
+    color: #7E8489;
+}
+
+.sub-menu ul li a:hover{
+    color: #333e48;
+}
+
+.main-nav:hover .sub-menu{
+    max-height: 340px;
+    padding: 20px 0 30px;
+    overflow: visible;
+    background: white;
+    transition: all 0.2s 
+}
+
+.overlay{
+    position: relative;
+    height: 84vh;
+    max-height: 800px;
+    margin-top: 70px;
+}
+
+.overlay-image{
+    position: relative;
+    width:100%;
+    height: 84vh;
+    background: url("img/hero-cafe-new.jpg") no-repeat fixed center;
+    background-size: cover;
+    vertical-align: middle;
+}
+.black-film{
+    background: rgba(0,0,0,0.2);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+}
+
+.content1{
+    height: 84vh;
+    max-height: 800px;
+    display: table;
+    color: white;
+}
+
+.content{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    
+}
+
+.align{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.content-header{
+    font-size: 48px;
+    line-height: 1.35;
+    max-width: 851px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.align-final{
+    margin: 0 auto 0 0;
+    max-width: 50%;
+    width: 86%;
+    padding: 40px 30px;
+}
+
+.dash-trailing::after{
+    content: '';
+    width: 40px;
+    background: #0d97ff; 
+    display: block;
+    content: '';
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+    height: 5px;
+}
+
+.content-para{
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 90%;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.features{
+    padding: 80px 30px;
+}
+
+.features-1{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1026px;
+    width: 100%;
+}
+
+.text-block{
+    width: 50%;
+}
+
+.text-block h2{
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 10px;
+    max-width: 410px;
+    color: #333e48;
+}
+.text-block p{
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 410px;
+    color: #333e48;
+}
+
+.image-block{
+    width: 50%;
+    text-align: center;
+}
+
+.image-block img{
+    width: auto;
+    display: block;
+    max-height: 600px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.overlay2{
+    background: url(img/2perc-newfooter.jpg) no-repeat center;
+    width:100%;
+    height: 30vh;
+    vertical-align: middle;
+    background-size: 100% 100%;
+    padding: 180px 30px;
+}
+
+.svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+.footer-div{
+    color: #0d97ff;
+    background: #fafafa;
+}
+
+.footer-final{
+    min-height: 300px;
+    padding: 80px 40px;
+    margin: 0 10%;
+}
+
+.footer-lists a{
+    color: #0d97ff;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 500;
+}
+
+.footer-lists a:hover{
+    color: #005fa6;
+}
+
+.footer-lists{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.footer-lists > div{
+    flex: 0 0 10%;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0;
+}
+
+.footer-links >div{
+    flex: 0 0 50%;
+}
+
+.footer-input{
+    display: flex;
+}
+
+.footer-community > ul{
+    display: flex;
+}
+
+.footer-community li{
+    margin: 0 20px 0 0;
+}
+
+.footer-lists h5{
+    font-size: 16px;
+    margin-bottom: 14px;
+    line-height: 24px;
+}
+
+.footer-links h5{
+    margin-bottom: 23px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+input{
+    border: 0;
+    font-size: 14px;
+    outline: 0;
+}
+
+.footer-email{
+    border-bottom: 2px solid #0d97ff;
+    padding: 0;
+    line-height: 38px;
+    margin: 0 8px 0 0;
+    color: #0d97ff;
+    max-width: 300px;
+    width: 100%;
+}
+
+.legal-disclaimer{
+    margin-top: 70px;
+    width: 70%;
+    line-height: 24px;
+}
+
+small {
+	font-size: 12px;
+	font-family: "CalibreReg";
+	line-height: 1.5
+}
+
+.form{
+    background: url("img/2perc-newfooter.jpg") no-repeat center;
+    width:100%;
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+form{
+    margin-left: 5%;
+}
+
+input[type="submit"]{
+    border-radius: 2px;
+    padding: 0px 40px;
+    color: white;
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: 13px;
+    background: #0d97ff;
+}
